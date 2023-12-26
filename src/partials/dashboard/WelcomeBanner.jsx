@@ -7,7 +7,7 @@ const getTime = () => {
     console.log('pagii')
     return 'Pagi'
   }
-  else if (temp >= 11 && temp.getHours <= 14) {
+  else if (temp >= 11 && temp <= 14) {
     console.log('siangggg');
     return 'Siang'
   }

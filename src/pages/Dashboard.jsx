@@ -67,8 +67,8 @@ function Dashboard() {
 
             {/* Cards */}
 
-            <div className="grid xl:grid-cols-[2fr_1fr] grid-cols-1 gap-4">
-              <div className="flex flex-col gap-4">
+            <div className="flex flex-col xl:flex-row gap-4">
+              <div className="flex flex-col gap-4 xl:w-2/3">
                 <KuliahCard />
                 <AgendaGroupCard/>
                 <KuliahCard />
@@ -77,7 +77,7 @@ function Dashboard() {
                 <AgendaGroupCard/>
                 <AgendaGroupCard/>
               </div>
-              <div className="flex flex-col xl:flex-grow-0 gap-4">
+              <div className="flex flex-col gap-4 xl:w-1/3">
                 <Diagram />
                 <Broadcast />
               </div>

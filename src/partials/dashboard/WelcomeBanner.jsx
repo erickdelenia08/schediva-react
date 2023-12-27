@@ -4,15 +4,12 @@ import { useState } from 'react';
 const getTime = () => {
   const temp = Number(new Date().getHours());
   if (temp < 11) {
-    console.log('pagii')
     return 'Pagi'
   }
   else if (temp >= 11 && temp <= 14) {
-    console.log('siangggg');
     return 'Siang'
   }
   else if (temp > 14 && temp < 18) {
-    console.log('soreeee')
     return 'Sore'
   }
   return 'Malam'

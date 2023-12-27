@@ -30,7 +30,7 @@ function Diagram() {
   return (
     <div className="flex flex-col bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
       <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
-        <h2 className="font-semibold text-slate-800 dark:text-slate-100">Agenda Bulan ini</h2>
+        <h2 className="font-semibold text-slate-800 dark:text-slate-100">Diagram</h2>
       </header>
       {/* Chart built with Chart.js 3 */}
       {/* Change the height attribute to adjust the chart height */}

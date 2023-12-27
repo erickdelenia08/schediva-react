@@ -70,16 +70,23 @@ function Dashboard() {
             <div className="flex flex-col xl:flex-row gap-4">
               <div className="flex flex-col gap-4 xl:w-2/3">
                 <KuliahCard />
-                <AgendaGroupCard/>
+                <AgendaGroupCard />
                 <KuliahCard />
-                <AgendaGroupCard/>
+                <AgendaGroupCard />
                 <KuliahCard />
-                <AgendaGroupCard/>
-                <AgendaGroupCard/>
+                <AgendaGroupCard />
+                <AgendaGroupCard />
               </div>
               <div className="flex flex-col gap-4 xl:w-1/3">
-                <Diagram />
-                <Broadcast />
+                <div className="flex flex-col bg-indigo-200 dark:bg-indigo-500 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
+                  <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
+                    <h2 className="font-semibold text-lg text-slate-800 dark:text-slate-100">Agenda Bulan Desember</h2>
+                  </header>
+                  <Diagram />
+                  <Broadcast />
+                </div>
+                {/* <Diagram />
+                <Broadcast /> */}
               </div>
             </div>
 

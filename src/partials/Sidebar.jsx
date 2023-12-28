@@ -72,7 +72,9 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <NavLink end to="/" className="block">
               <img src={logo} alt="" width='40px' className='' />
             </NavLink>
-            <span className={`pt-3 text-xl uppercase font-bold text-slate-300 pointer-events-none origin-center scale-100 duration-300 ${!sidebarExpanded && 'scale-0'}`}>Schediva</span>
+            <span className={`pt-3 text-xl uppercase font-bold text-slate-300 pointer-events-none origin-center scale-100 duration-300 ${!sidebarExpanded && 'scale-0'}`}>
+              Schediva
+            </span>
           </div>
 
           {/* Links */}

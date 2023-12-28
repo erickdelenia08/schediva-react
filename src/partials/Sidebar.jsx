@@ -52,7 +52,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
       ></div>
 
       {/* Sidebar */}
-      <div className="md:pl-10 md:py-10 h-screen">
+      <div className="sm:pl-10 sm:py-10 h-screen">
         <div
           id="sidebar"
           ref={sidebar}

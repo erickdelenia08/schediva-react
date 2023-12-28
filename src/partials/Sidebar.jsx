@@ -56,7 +56,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
         <div
           id="sidebar"
           ref={sidebar}
-          className={`rounded-md h-full flex flex-col absolute z-40 lg:static lg:left-auto lg:top-auto lg:translate-x-0 no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 shrink-0 bg-slate-800 p-4 transition-all duration-200 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-64'
+          className={`shadow-xl bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-700 rounded-md h-full flex flex-col absolute z-40 lg:static lg:left-auto lg:top-auto lg:translate-x-0 no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 shrink-0 p-4 transition-all duration-200 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-64'
             }`}
           onMouseEnter={() => setSidebarExpanded(true)} onMouseLeave={() => setSidebarExpanded(false)}
         >
@@ -72,7 +72,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <NavLink end to="/" className="block">
               <img src={logo} alt="" width='40px' className='' />
             </NavLink>
-            <span className={`pt-3 text-xl uppercase font-bold text-slate-300 pointer-events-none origin-center sidebar-expanded:scale-100 duration-300 scale-0`}>
+            <span className={`pt-3 text-xl uppercase font-bold dark:text-slate-300 pointer-events-none origin-center sidebar-expanded:scale-100 duration-300 scale-0`}>
               Schediva
             </span>
           </div>

@@ -52,11 +52,11 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
       ></div>
 
       {/* Sidebar */}
-      <div className="lg:pl-10 lg:py-10 h-screen">
+      <div className="md:pl-10 md:py-10 h-screen">
         <div
           id="sidebar"
           ref={sidebar}
-          className={`shadow-xl bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-700 rounded-md h-full flex flex-col absolute z-40 lg:static lg:left-auto lg:top-auto lg:translate-x-0 no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 shrink-0 p-4 transition-all duration-200 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-64'
+          className={`shadow-xl bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-700 rounded-md h-full flex flex-col absolute z-40 lg:static lg:left-auto lg:top-auto lg:translate-x-0 no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 p-4 transition-all duration-200 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-64'
             }`}
           onMouseEnter={() => setSidebarExpanded(true)} onMouseLeave={() => setSidebarExpanded(false)}
         >
@@ -72,7 +72,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <NavLink end to="/" className="block">
               <img src={logo} alt="" width='40px' className='' />
             </NavLink>
-            <span className={`pt-3 text-xl uppercase font-bold dark:text-slate-300 pointer-events-none origin-center sidebar-expanded:scale-100 duration-300 scale-0`}>
+            <span className={`pt-3 text-xl uppercase font-bold dark:text-slate-300 pointer-events-none origin-center ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200`}>
               Schediva
             </span>
           </div>
@@ -82,10 +82,10 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             {/* Pages group */}
             <div>
               <h3 className="text-xs uppercase text-slate-500 font-semibold pl-3">
-                <span className="hidden lg:block lg:sidebar-expanded:hidden text-center w-6" aria-hidden="true">
+                <span className="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">
                   •••
                 </span>
-                <span className="lg:hidden lg:sidebar-expanded:block">Pages</span>
+                <span className="lg:hidden lg:sidebar-expanded:block 2xl:block">Pages</span>
               </h3>
               <ul className="mt-3">
                 {/* Dashboard */}
@@ -114,7 +114,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                           d="M12 15c-1.654 0-3-1.346-3-3 0-.462.113-.894.3-1.285L6 6l4.714 3.301A2.973 2.973 0 0112 9c1.654 0 3 1.346 3 3s-1.346 3-3 3z"
                         />
                       </svg>
-                      <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 duration-200">
+                      <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                         Dashboard
                       </span>
                     </div>
@@ -141,7 +141,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                           d="M17 23a1 1 0 01-1-1 4 4 0 00-4-4 1 1 0 010-2 4 4 0 004-4 1 1 0 012 0 4 4 0 004 4 1 1 0 010 2 4 4 0 00-4 4 1 1 0 01-1 1zM7 13a1 1 0 01-1-1 4 4 0 00-4-4 1 1 0 110-2 4 4 0 004-4 1 1 0 112 0 4 4 0 004 4 1 1 0 010 2 4 4 0 00-4 4 1 1 0 01-1 1z"
                         />
                       </svg>
-                      <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 duration-200">
+                      <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                         Perkuliahan
                       </span>
                     </div>
@@ -153,10 +153,10 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             {/* More group */}
             <div>
               <h3 className="text-xs uppercase text-slate-500 font-semibold pl-3">
-                <span className="hidden lg:block lg:sidebar-expanded:hidden text-center w-6" aria-hidden="true">
+                <span className="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">
                   •••
                 </span>
-                <span className="lg:hidden lg:sidebar-expanded:block">More</span>
+                <span className="lg:hidden lg:sidebar-expanded:block 2xl:block">More</span>
               </h3>
               <ul className="mt-3">
                 {/* Authentication */}
@@ -174,7 +174,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                           d="M18.9401 5.42141L13.7701 2.43141C12.7801 1.86141 11.2301 1.86141 10.2401 2.43141L5.02008 5.44141C2.95008 6.84141 2.83008 7.05141 2.83008 9.28141V14.7114C2.83008 16.9414 2.95008 17.1614 5.06008 18.5814L10.2301 21.5714C10.7301 21.8614 11.3701 22.0014 12.0001 22.0014C12.6301 22.0014 13.2701 21.8614 13.7601 21.5714L18.9801 18.5614C21.0501 17.1614 21.1701 16.9514 21.1701 14.7214V9.28141C21.1701 7.05141 21.0501 6.84141 18.9401 5.42141ZM12.0001 15.2514C10.2101 15.2514 8.75008 13.7914 8.75008 12.0014C8.75008 10.2114 10.2101 8.75141 12.0001 8.75141C13.7901 8.75141 15.2501 10.2114 15.2501 12.0014C15.2501 13.7914 13.7901 15.2514 12.0001 15.2514Z"
                           fill="#292D32" />
                       </svg>
-                      <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 duration-200">
+                      <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                         Users Management
                       </span>
                     </div>
@@ -184,6 +184,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
               </ul>
             </div>
           </div>
+
 
           {/* Expand / collapse button
           <div className="pt-3 hidden lg:inline-flex justify-end mt-auto">

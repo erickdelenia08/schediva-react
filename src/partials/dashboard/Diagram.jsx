@@ -1,5 +1,6 @@
 import React from 'react';
 import DoughnutChart from '../../charts/DoughnutChart';
+import BarChart from '../../charts/BarChart03';
 
 // Import utilities
 import { tailwindConfig } from '../../utils/Utils';

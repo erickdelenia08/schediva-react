@@ -14,11 +14,10 @@ import Banner from '../partials/Banner';
 function Dashboard() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(true);
+  const [scrollY, setScrollY] = useState(false);
   const ref=useRef(null)
 
   const handleScroll = useCallback((event) => {
-    // setScrollY(event.currentTarget.scrollTop);
     if (event.currentTarget.scrollTop > 800) {
       setScrollY(true);
     } else {

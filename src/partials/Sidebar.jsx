@@ -51,7 +51,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
         aria-hidden="true"
       ></div>
 
-      <div className={`h-screen p-10 absolute lg:relative z-60 lg:translate-x-0 -translate-x-full ${sidebarOpen && 'translate-x-0'} transition-all duration-200 ease-in-out`}>
+      <div className={`h-screen py-10 pl-10 pr-4 absolute lg:relative z-60 lg:translate-x-0 -translate-x-full ${sidebarOpen && 'translate-x-0'} transition-all duration-200 ease-in-out`}>
         <div id="sidebar" onMouseEnter={() => setSidebarExpanded(true)} onMouseLeave={() => setSidebarExpanded(false)} className={`shadow-xl bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-700 rounded-md h-full flex flex-col lg:static lg:left-auto lg:top-auto lg:translate-x-0 no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 p-4 transition-all duration-200 ease-in-out`}>
           {/* Sidebar header */}
           <div className="relative flex flex-col justify-between items-center mb-10 pr-3 sm:px-2 ">

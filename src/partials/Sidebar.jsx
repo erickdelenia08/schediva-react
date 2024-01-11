@@ -46,28 +46,15 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
     <div>
       {/* Sidebar backdrop (mobile only) */}
       <div
-        className={`fixed inset-0 bg-slate-900 bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        className={`fixed inset-0 bg-slate-600 bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         aria-hidden="true"
       ></div>
 
-      {/* Sidebar */}
-      <div className="md:pl-10 md:py-10 h-screen">
-        <div
-          id="sidebar"
-          ref={sidebar}
-          className={`shadow-xl bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-700 rounded-md h-full flex flex-col absolute z-40 lg:static lg:left-auto lg:top-auto lg:translate-x-0 no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 p-4 transition-all duration-200 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-64'
-            }`}
-          onMouseEnter={() => setSidebarExpanded(true)} onMouseLeave={() => setSidebarExpanded(false)}
-        >
-          <button className={`origin-center duration-100 z-60 absolute right-[-15px] top-8 ${!sidebarOpen && 'rotate-180 hidden'}`} onClick={() => setSidebarOpen(!sidebarOpen)}>
-            <svg width="35px" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM14.79 12.53L11.26 16.06C11.11 16.21 10.92 16.28 10.73 16.28C10.54 16.28 10.35 16.21 10.2 16.06C9.91 15.77 9.91 15.29 10.2 15L13.2 12L10.2 9C9.91 8.71 9.91 8.23 10.2 7.94C10.49 7.65 10.97 7.65 11.26 7.94L14.79 11.47C15.09 11.76 15.09 12.24 14.79 12.53Z" fill="#ffffff" />
-            </svg>
-          </button>
+      <div className={`h-screen p-10 absolute lg:relative z-60 lg:translate-x-0 -translate-x-full ${sidebarOpen && 'translate-x-0'} transition-all duration-200 ease-in-out`}>
+        <div id="sidebar" onMouseEnter={() => setSidebarExpanded(true)} onMouseLeave={() => setSidebarExpanded(false)} className={`shadow-xl bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-700 rounded-md h-full flex flex-col lg:static lg:left-auto lg:top-auto lg:translate-x-0 no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 p-4 transition-all duration-200 ease-in-out`}>
           {/* Sidebar header */}
-          <div className="flex flex-col justify-between items-center mb-10 pr-3 sm:px-2 ">
+          <div className="relative flex flex-col justify-between items-center mb-10 pr-3 sm:px-2 ">
             {/* Logo */}
             <NavLink end to="/" className="block">
               <img src={logo} alt="" width='40px' className='' />
@@ -75,6 +62,12 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <span className={`pt-3 text-xl uppercase font-bold dark:text-slate-300 pointer-events-none origin-center ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200`}>
               Schediva
             </span>
+            <button className={`origin-center duration-100 z-60 absolute right-[-35px] top-8 ${!sidebarOpen && 'rotate-180 hidden'}`} onClick={() => setSidebarOpen(!sidebarOpen)}>
+              <svg width="35px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM14.79 12.53L11.26 16.06C11.11 16.21 10.92 16.28 10.73 16.28C10.54 16.28 10.35 16.21 10.2 16.06C9.91 15.77 9.91 15.29 10.2 15L13.2 12L10.2 9C9.91 8.71 9.91 8.23 10.2 7.94C10.49 7.65 10.97 7.65 11.26 7.94L14.79 11.47C15.09 11.76 15.09 12.24 14.79 12.53Z" fill="#ffffff" />
+              </svg>
+            </button>
           </div>
 
           {/* Links */}
@@ -184,7 +177,6 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
               </ul>
             </div>
           </div>
-          
         </div>
       </div>
     </div>

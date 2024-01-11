@@ -35,7 +35,7 @@ function Dashboard() {
         <main>
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
 
-            <div className="flex flex-col items-end sticky top-0 right-0 xl:z-60 z-20">
+            <div className="flex flex-col items-end sticky top-3 right-0 xl:z-60 z-20 mt-2">
               <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} refer={ref} isScroll={scrollY} />
             </div>
             <WelcomeBanner />
@@ -54,7 +54,6 @@ function Dashboard() {
                 <KuliahCard />
                 <AgendaGroupCard />
                 <AgendaGroupCard />
-                <div className="h-10 bg-green-600">scrolling refer to</div>
               </div>
               <div className="flex flex-col gap-4 xl:w-1/3">
                 <div className="flex flex-col bg-indigo-200 dark:bg-indigo-500 shadow-lg rounded-lg border border-slate-200 dark:border-slate-700">

@@ -55,12 +55,12 @@ const Login = () => {
     }
 
     return (
-        <div className='flex flex-col md:flex-row h-screen w-screen'>
-            <div className="md:flex flex-col md:w-1/2 hidden items-center justify-center">
+        <div className='flex flex-col lg:flex-row h-screen w-screen'>
+            <div className="lg:flex flex-col lg:w-1/2 hidden items-center justify-center">
                 <img src={schdv} className='w-64' alt="" />
                 <h3 className='text-xl'>{text}</h3>
             </div>
-            <div className="bg-white flex md:w-1/2 h-full items-center justify-center">
+            <div className="bg-white flex lg:w-1/2 h-full items-center justify-center">
                 <form onSubmit={handleSubmit} className='px-10 py-20 rounded-md shadow-xl shadow-slate-300 flex flex-col gap-y-2'>
                     <div className='flex flex-col'>
                         <label className='text-slate-600' htmlFor="username">username</label>

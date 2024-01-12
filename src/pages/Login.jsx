@@ -77,7 +77,7 @@ const Login = () => {
                     {/* <img src={schdv} className='w-16' alt="" /> */}
                     <span className='text-8xl text-slate-700'><FaHandMiddleFinger /></span>
                     <h2 className='text-slate-700 font-bold text-4xl'>Let's Get Started</h2>
-                    <h2 className='text-slate-500 text-lg'>Welcome back! Please enter your details</h2>
+                    <h2 className='text-slate-500 text-lg text-justify'>please complete the form below brodie!</h2>
                     <div className='flex flex-col w-full pt-4'>
                         <label className='text-slate-700 font-bold' htmlFor="username">Username</label>
                         <input placeholder='Your Email Adress' className='p-3 rounded-md border-slate-400 focus:border-slate-600 focus:ring-slate-600 box-border text-slate-700' type="text" name="username" id="username" />
